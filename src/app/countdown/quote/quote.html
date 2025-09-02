@@ -1,4 +1,5 @@
 <div class="quote-container">
-    <p class="quote">{{ quote }}</p>
+  <app-spinner *ngIf="loading"></app-spinner>
+  <p *ngIf="error">{{ error }}</p>
+  <blockquote *ngIf="!loading && !error">{{ quote }}</blockquote>
 </div>
-
