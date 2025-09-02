@@ -1,13 +1,16 @@
 header {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .logo {
-    display:block;
-    max-width:120px;
-    height:auto; }
+  display: block;
+  max-width: 120px;
+  height: auto;
+}
 
 @media (orientation: landscape) {
-    .logo { display: none; }
+  .logo {
+    display: none;
+  }
 }

@@ -8,7 +8,7 @@ import { Spinner } from '../../reusables/spinner/spinner';
   standalone: true,
   imports: [CommonModule, Spinner],
   templateUrl: './quote.html',
-  styleUrl: './quote.scss'
+  styleUrl: './quote.scss',
 })
 export class Quote {
   quote: string = '';
@@ -32,7 +32,7 @@ export class Quote {
         console.error('API error:', err);
         this.error = 'Failed to load quote';
         this.loading = false;
-      }
+      },
     });
   }
 }

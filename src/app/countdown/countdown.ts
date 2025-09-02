@@ -7,8 +7,6 @@ import { Quote } from './quote/quote';
   selector: 'app-countdown',
   imports: [TimerDisplay, Quote, DateInfo],
   templateUrl: './countdown.html',
-  styleUrl: './countdown.scss'
+  styleUrl: './countdown.scss',
 })
-export class Countdown {
-
-}
+export class Countdown {}

@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-date-info',
   imports: [],
   templateUrl: './date-info.html',
-  styleUrl: './date-info.scss'
+  styleUrl: './date-info.scss',
 })
-export class DateInfo {
-
-}
+export class DateInfo {}

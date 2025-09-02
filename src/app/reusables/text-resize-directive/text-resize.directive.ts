@@ -2,12 +2,12 @@ import { AfterViewInit, Directive, ElementRef, OnDestroy } from '@angular/core';
 
 @Directive({
   selector: '[resizeText]',
-  standalone: true
+  standalone: true,
 })
 export class ResizeTextDirective implements AfterViewInit, OnDestroy {
-  private ro?: ResizeObserver;        // watch container only
-  private mo?: MutationObserver;      // watch text changes
-  private rafId?: number;             // debounce per frame
+  private ro?: ResizeObserver; // watch container only
+  private mo?: MutationObserver; // watch text changes
+  private rafId?: number; // debounce per frame
 
   constructor(private el: ElementRef<HTMLElement>) {}
 
@@ -44,7 +44,10 @@ export class ResizeTextDirective implements AfterViewInit, OnDestroy {
   private fit() {
     const el = this.el.nativeElement;
     const txt = (el.textContent || '').trim();
-    if (!txt) { el.style.fontSize = ''; return; }
+    if (!txt) {
+      el.style.fontSize = '';
+      return;
+    }
 
     const container = el.parentElement ?? el;
     const cw = container.clientWidth;
@@ -67,8 +70,12 @@ export class ResizeTextDirective implements AfterViewInit, OnDestroy {
       // Height fits if chosen px is within our precomputed cap (no expensive DOM read)
       const fitsH = mid <= maxByHeight;
 
-      if (fitsW && fitsH) { best = mid; low = mid + 1; }
-      else { high = mid - 1; }
+      if (fitsW && fitsH) {
+        best = mid;
+        low = mid + 1;
+      } else {
+        high = mid - 1;
+      }
     }
 
     el.style.fontSize = `${best}px`;

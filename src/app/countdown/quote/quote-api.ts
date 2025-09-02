@@ -6,14 +6,13 @@ export interface QuoteResponse {
   quote: string;
 }
 
-@Injectable({providedIn: 'root'})
-
+@Injectable({ providedIn: 'root' })
 export class QuoteApi {
   private apiUrl = 'https://dummyjson.com/quotes/random';
 
   constructor(private http: HttpClient) {}
 
-  getRandomQuote():Observable<QuoteResponse> {
-    return this.http.get<QuoteResponse>(this.apiUrl)
+  getRandomQuote(): Observable<QuoteResponse> {
+    return this.http.get<QuoteResponse>(this.apiUrl);
   }
 }

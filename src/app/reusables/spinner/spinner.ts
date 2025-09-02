@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-spinner',
   imports: [],
   templateUrl: './spinner.html',
-  styleUrl: './spinner.scss'
+  styleUrl: './spinner.scss',
 })
-export class Spinner {
-
-}
+export class Spinner {}

@@ -6,7 +6,7 @@ import { ResizeTextDirective } from '../../reusables/text-resize-directive/text-
   standalone: true,
   templateUrl: './timer-display.html',
   styleUrls: ['./timer-display.scss'],
-  imports: [ResizeTextDirective]
+  imports: [ResizeTextDirective],
 })
 export class TimerDisplay implements AfterViewInit {
   countdownText = '';
