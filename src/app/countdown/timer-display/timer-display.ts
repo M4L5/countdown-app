@@ -1,38 +1,33 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { ResizeTextDirective } from '../../reusables/text-resize-directive/text-resize.directive';
 
 @Component({
-  standalone: true,
   selector: 'app-timer-display',
-  imports: [],
+  standalone: true,
   templateUrl: './timer-display.html',
-  styleUrl: './timer-display.scss'
+  styleUrls: ['./timer-display.scss'],
+  imports: [ResizeTextDirective]
 })
-export class TimerDisplay implements OnInit, OnDestroy {
-  countdownText = "";
-  private timerId: any;
+export class TimerDisplay implements AfterViewInit {
+  countdownText = '';
+  private endDate = new Date('2026-06-19T00:00:00');
 
-  private target = new Date(2026, 5, 19, 0, 0, 0);
+  @ViewChild(ResizeTextDirective, { static: false }) fitText!: ResizeTextDirective;
 
-  ngOnInit() {
+  ngAfterViewInit() {
     this.updateCountdown();
-    this.timerId = setInterval(() => this.updateCountdown(), 1000);
-  }
-
-  ngOnDestroy() {
-    clearInterval(this.timerId);
+    setInterval(() => this.updateCountdown(), 1000);
   }
 
   private updateCountdown() {
-    let diff = this.target.getTime() - Date.now();
-    if (diff < 0) diff = 0; 
+    const now = new Date().getTime();
+    const diff = this.endDate.getTime() - now;
 
-    let rest = diff;
-    const days = Math.floor(rest / 86_400_000); rest -= days * 86_400_000;
-    const hours = Math.floor(rest / 3_600_000); rest -= hours * 3_600_000;
-    const minutes = Math.floor(rest / 60_000);   rest -= minutes * 60_000;
-    const seconds = Math.floor(rest / 1_000);
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
 
     this.countdownText = `${days} days, ${hours} h, ${minutes} m, ${seconds} s`;
-    if (diff === 0) clearInterval(this.timerId);
   }
 }
