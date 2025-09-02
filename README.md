@@ -2,6 +2,8 @@
 Make a responsive countdown app in angular. The text should resize and fill the screen's width in portrait and landscape mode, aswell as for desktop and have no linebreaks.
 Fetch a quote from an api every time the page loads and doesn't cache the quote locally. If the quote is loading, show a loading spinner.
 
+I followed the design where the logo and quote is showing in portrait mode, but not in landscape mode.
+
 
 ## Setup
 
