@@ -1,11 +1,27 @@
-<div class="date-info-container">
+<form class="date-info-container" (submit)="$event.preventDefault()">
   <div class="styled-field">
-    <span class="label">Title</span>
-    <p class="value">Midsummer Eve</p>
+    <label class="label" for="titleInput">Title</label>
+    <input
+      id="titleInput"
+      class="value"
+      type="text"
+      name="title"
+      [ngModel]="title"
+      (ngModelChange)="titleChange.emit($event)"
+      placeholder="write your occassion"
+    />
   </div>
 
   <div class="styled-field">
-    <span class="label">Date</span>
-    <p class="value">2026-06-19</p>
+    <label class="label" for="dateInput">Date</label>
+    <input
+      id="dateInput"
+      class="value"
+      type="date"
+      name="date"
+      [ngModel]="date"
+      (ngModelChange)="dateChange.emit($event)"
+      placeholder="Choose your date"
+    />
   </div>
-</div>
+</form>

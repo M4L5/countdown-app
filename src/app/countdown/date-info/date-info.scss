@@ -22,13 +22,20 @@
     left: 12px;
     background: #f5f3f3;
     padding: 0 4px;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     color: #555;
   }
 
   .value {
-    margin: 0;
-    font-size: 1rem;
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    box-sizing: border-box;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    font-family: 'Open Sauce Sans';
   }
 }
 
