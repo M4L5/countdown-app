@@ -1,8 +1,23 @@
-# CountdownApp
+## The assignment
+Make a responsive countdown app in angular. The text should resize and fill the screen's width in portrait and landscape mode, aswell as for desktop and have no linebreaks.
+Fetch a quote from an api every time the page loads and doesn't cache the quote locally. If the quote is loading, show a loading spinner.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.0.
+I followed the design where the logo and quote is showing in portrait mode, but not in landscape mode.
 
-## Development server
+
+## Setup
+
+To clone the project
+
+```bash
+git clone https://github.com/M4L5/countdown-app.git
+```
+
+Go to directory
+
+```bash
+cd countdown-app
+```
 
 To start a local development server, run:
 
@@ -10,50 +25,15 @@ To start a local development server, run:
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. 
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## The webpage
 
-```bash
-ng generate component component-name
-```
+https://countdown-app-by-malingoethe.netlify.app/
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+How it should look:
 
-```bash
-ng generate --help
-```
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<img width="398" height="856" alt="image" src="https://github.com/user-attachments/assets/f9fe6f46-1c50-4429-a2d1-52d38554ce59" />
+<img width="891" height="418" alt="image" src="https://github.com/user-attachments/assets/6a296208-3a0a-430c-a75b-4a38f1d50d87" />
