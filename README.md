@@ -4,6 +4,9 @@ Fetch a quote from an api every time the page loads and doesn't cache the quote 
 
 I followed the design where the logo and quote is showing in portrait mode, but not in landscape mode.
 
+!Note!
+Project updated so that the user can input their own title and date. Midsummer Eve and the date is default 
+
 
 ## Setup
 
